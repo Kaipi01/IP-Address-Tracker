@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+
+<body>
+  <div class="curtain">
+    <img src="./images/reload.svg" alt="loading">
+  </div>
+  <header>
+    <h1>IP Address Tracker</h1>
+    <form>
+      <label class="visually-hide" for="ip-address-input">Search for any IP address or domain</label>
+      <input type="text" name="ip-address-input" id="ip-address-input" placeholder="Search for any IP address or domain"
+        required>
+      <p class="error" role="alert"></p>
+      <button type="submit">
+        <span class="visually-hide">Submit</span>
+        <img src="./images/icon-arrow.svg" alt=">" aria-hidden="true">
+      </button>
+    </form>
+  </header>
+  <main>
+    <ul>
+      <li>
+        ip address
+        <span id="ip-address"></span>
+      </li>
+      <li>
+        location
+        <span id="location"></span>
+      </li>
+      <li>
+        timezone
+        <span id="timezone"></span>
+      </li>
+      <li>
+        <abbr title="Internet service provider">isp</abbr>
+        <span id="isp"></span>
+      </li>
+    </ul>
+    <div class="map" id="map"></div>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
