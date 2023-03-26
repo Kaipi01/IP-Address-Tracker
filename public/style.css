@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-gray: hsl(0, 0%, 17%);
+  --gray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  background-color: red;
+  min-height: 100vh;
+}
+
+.curtain {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000bf;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+}
+
+.curtain > img {
+  width: 200px;
+  z-index: 999;
+  -webkit-animation: rotate 1s infinite linear;
+  animation: rotate 1s infinite linear;
+}
+
+header {
+  background-image: url(./images/pattern-bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 220px;
+  color: #fff;
+}
+
+h1 {
+  padding: 20px 0;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+main {
+  background-color: var(--gray);
+  position: relative;
+  min-height: calc(100vh - 220px);
+  height: 600px;
+}
+
+input {
+  padding: 0 20px;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  width: 70%;
+  max-width: 450px;
+}
+
+.error {
+  background-color: rgb(243, 0, 0);
+  width: 210px;
+  padding: 5px 0;
+  border-radius: 5px;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  word-wrap: none;
+  font-size: 0.82rem;
+  transform: translateX(-50%);
+  display: none;
+}
+
+button[type="submit"] {
+  padding: 0 22px;
+  height: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus,
+button[type="submit"]:active {
+  background-color: var(--dark-gray);
+}
+
+button[type="submit"] img {
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  z-index: 2;
+  box-shadow: 0px 27px 60px -26px rgba(0, 0, 0, 0.354);
+  position: absolute;
+  display: flex;
+  top: -65px;
+  justify-content: center;
+  min-width: 320px;
+  list-style: none;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px 50px 35px 50px;
+  gap: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul li {
+  text-transform: uppercase;
+  color: var(--gray);
+  min-width: 200px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  padding-left: 30px;
+  border-left: 1px solid var(--gray);
+  min-height: 80px;
+}
+
+ul li:first-child {
+  padding-left: 0px;
+  border-left: none;
+}
+
+ul li span {
+  margin-top: 15px;
+  display: block;
+  letter-spacing: 0px;
+  color: #000;
+  text-transform: none;
+  font-size: 1.6rem;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 1150px) {
+  ul {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+}
+@media (max-width: 960px) {
+  ul {
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+
+  ul li {
+    border: none;
+    min-height: auto;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 879px) {
+  ul {
+    top: -180px;
+    gap: 17px;
+    padding-bottom: 25px;
+  }
+
+  ul li span {
+    margin-top: 10px;
+    font-size: 1.3rem;
+  }
+
+  header {
+    background-image: url(./images/pattern-bg-mobile.png);
+    height: 320px;
+  }
+
+  main {
+    min-height: calc(100vh - 320px);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.visually-hide {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
