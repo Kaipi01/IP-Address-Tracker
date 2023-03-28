@@ -27,6 +27,7 @@ async function getData(address) {
     try {
         const response = await fetch(`/api/${address}`);
         const data = await response.json();
+        console.log(data)
         return data;
     } catch (error) {
         console.error(error)
@@ -55,7 +56,6 @@ async function showData(address) {
     timezoneSpan.textContent = `UTC ${timezone}`;
     ispSpan.textContent = data.isp;
 
-    console.log(data);
     showLocationOnMap(lat, lng);
     showLoading(false);
 }
