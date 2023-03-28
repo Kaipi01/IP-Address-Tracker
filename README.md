@@ -31,15 +31,17 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/Kaipi01/IP-Address-Tracker
-- Live Site URL: https://kaipi01.github.io/IP-Address-Tracker/
+- Live Site URL: https://ip-address-tracker-eh3r.onrender.com
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
+- NODE JS
+- EXPRESS JS
 - Leaflet JS
 - geo.ipify.org API
+- Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 
